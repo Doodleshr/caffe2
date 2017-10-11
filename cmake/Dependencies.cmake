@@ -219,12 +219,7 @@ endif()
 
 # ---[ EIGEN
 set(EIGEN_MPL2_ONLY 1)
-find_package(Eigen3 QUIET)
-if(EIGEN3_FOUND)
-  caffe2_include_directories(${EIGEN3_INCLUDE_DIRS})
-else()
-  caffe2_include_directories(${PROJECT_SOURCE_DIR}/third_party/eigen)
-endif()
+caffe2_include_directories(${PROJECT_SOURCE_DIR}/third_party/eigen)
 
 # ---[ Python + Numpy
 if(BUILD_PYTHON)
